@@ -12,6 +12,11 @@ public class ObservableArrayAdapter<T> extends ArrayAdapter<T> {
     }
 
     public Observable<T> items() {
-        return Observable.range(0, getCount()).map(i -> getItem(i));
+        return Observable
+                .range(0, getCount())
+                .map(i -> getItem(i))
+                .window(getCount())
+                .toBlocking()
+                .single();
     }
 }

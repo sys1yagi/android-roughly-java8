@@ -18,7 +18,6 @@ import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import rx.Observable;
 import rx.android.observables.AndroidObservable;
 import rx.android.observables.ViewObservable;
 import rx.schedulers.Schedulers;
@@ -79,10 +78,7 @@ public class MainActivity extends ActionBarActivity {
                     adapter.items()
                             .filter(Todo::isChecked)
                             .filter(todoHelper::removeTodo)
-                            .toList()
-                            .subscribe(list -> {
-                                Observable.from(list).subscribe(adapter::remove);
-                            });
+                            .subscribe(adapter::remove);
                 });
         listView.setOnItemClickListener(
                 (parent, view, position, id) -> {
