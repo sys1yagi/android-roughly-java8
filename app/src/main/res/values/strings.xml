@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">android-roughly-java8</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="remove_checked">チェックした項目を削除する</string>
+    <string name="add">add</string>
+    <string name="updated_at">更新日:%1$s</string>
+    <string name="date">yyyy年MM月dd日 HH:mm:ss</string>
+    <string name="title_activity_edit">EditActivity</string>
+    <string name="edit_finish">完了</string>
+
+</resources>
